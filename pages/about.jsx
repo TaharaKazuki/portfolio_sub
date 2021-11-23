@@ -1,11 +1,10 @@
-import Header from '../components/shared/Header'
+import BaseLayout from '../components/layouts/BaseLayout'
 
 const About = () => {
   return (
-    <>
-      <Header />
+    <BaseLayout>
       <h1>I am About page</h1>
-    </>
+    </BaseLayout>
   )
 }
 
