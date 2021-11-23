@@ -1,0 +1,12 @@
+@import './shared/fonts';
+
+html,
+body {
+  font-family: 'Montserrat', 'Helvetica';
+}
+
+.parent-class {
+  &-title {
+    color: red;
+  }
+}
