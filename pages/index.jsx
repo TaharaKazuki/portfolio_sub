@@ -1,5 +1,17 @@
 import BaseLayout from '../components/layouts/BaseLayout'
 import { Container, Row, Col } from 'reactstrap'
+import Typed from 'react-typed'
+
+const roles = [
+  'React.js',
+  'Next.js',
+  'Vue.js',
+  'Nuxt.js',
+  'Node.js',
+  'TypeScript',
+  'GraphQl',
+  'WebRTC',
+]
 
 const Home = () => {
   return (
@@ -15,7 +27,7 @@ const Home = () => {
                 <div className={`flipper`}>
                   <div className="back">
                     <div className="hero-section-content">
-                      <h2> Full Stack Web Developer </h2>
+                      <h2> Frontend Engineer </h2>
                       <div className="hero-section-content-intro">
                         Have a look at my portfolio and job history.
                       </div>
@@ -30,12 +42,20 @@ const Home = () => {
             </Col>
             <Col md="6" className="hero-welcome-wrapper">
               <div className="hero-welcome-text">
-                <h1>
-                  Welcome to the portfolio website of Filip Jerga. Get informed,
-                  collaborate and discover projects I was working on through the
-                  years!
-                </h1>
+                <h1>Welcome to the portfolio website of Tahara Kazuki.</h1>
+                <h1>Technology stack</h1>
               </div>
+              <Typed
+                loop
+                typeSpeed={70}
+                backSpeed={70}
+                strings={roles}
+                backDelay={1000}
+                loopCount={0}
+                showCursor
+                className="self-typed"
+                cursorChar="|"
+              />
               <div className="hero-welcome-bio">
                 <h1>Let s take a look on my work.</h1>
               </div>
