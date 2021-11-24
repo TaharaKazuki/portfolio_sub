@@ -25,7 +25,7 @@ const Header = () => {
       >
         <div className="navbar-brand">
           <Link href="/">
-            <a className="port-navbar-brand">Filip Jerga</a>
+            <a className="port-navbar-brand">Tahara Kazuki</a>
           </Link>
         </div>
         <NavbarToggler onClick={toggle} />
