@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react'
 import BaseLayout from '@/components/layouts/BaseLayout'
 import BasePage from '@/components/BasePage'
 import Link from 'next/link'
 import { useGetPosts } from '@/actions'
 
 const Portfolios = () => {
-  const { posts, error } = useGetPosts()
+  const { posts, error, loading } = useGetPosts()
 
   const renderPosts = () =>
     posts.map((post) => (
@@ -20,8 +19,11 @@ const Portfolios = () => {
     <BaseLayout>
       <BasePage>
         <h1>I am portfolios page</h1>
+        {loading && <p>Loading data...</p>}
         {posts && <ul>{renderPosts()}</ul>}
-        {error && <div className="alert alert-danger">{error.message}</div>}
+        {error.message && (
+          <div className="alert alert-danger">{error.message}</div>
+        )}
       </BasePage>
     </BaseLayout>
   )
