@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const handlerPosts = async (req, res) => {
+const handlerGet = async (req, res) => {
   const { data } = await axios
     .get('https://jsonplaceholder.typicode.com/posts')
     .catch((e) => {
@@ -10,4 +10,4 @@ const handlerPosts = async (req, res) => {
   res.status(200).json(data.slice(0, 10))
 }
 
-export default handlerPosts
+export default handlerGet
