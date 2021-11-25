@@ -2,10 +2,10 @@ import React from 'react'
 import BaseLayout from '@/components/layouts/BaseLayout'
 import BasePage from '@/components/BasePage'
 import Link from 'next/link'
-import { useGetData } from '@/actions'
+import { useGetPosts } from '@/actions'
 
 const Portfolios = () => {
-  const { data, error, loading } = useGetData()
+  const { data, error, loading } = useGetPosts()
 
   const renderPosts = (posts) =>
     posts.map((post) => (
