@@ -1,7 +1,6 @@
 import axios from 'axios'
 
 const handlerGet = async (req, res) => {
-  console.info('通過 action')
   const { data } = await axios
     .get('https://jsonplaceholder.typicode.com/posts')
     .catch((e) => {
