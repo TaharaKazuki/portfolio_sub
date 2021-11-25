@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useGetData } from '@/actions'
 
 const Portfolios = () => {
-  const { data, error, loading } = useGetData('/api/v1/posts')
+  const { data, error, loading } = useGetData()
 
   const renderPosts = (posts) =>
     posts.map((post) => (
@@ -22,9 +22,7 @@ const Portfolios = () => {
         <h1>I am portfolios page</h1>
         {loading && <p>Loading data...</p>}
         {data && <ul>{renderPosts(data)}</ul>}
-        {error.message && (
-          <div className="alert alert-danger">{error.message}</div>
-        )}
+        {error && <div className="alert alert-danger">{error.message}</div>}
       </BasePage>
     </BaseLayout>
   )

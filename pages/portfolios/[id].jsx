@@ -16,9 +16,7 @@ const Portfolio = () => {
     <BaseLayout>
       <BasePage>
         {loading && <p>Loading Data...</p>}
-        {error.message && (
-          <div className="alert alert-danger">{error.message}</div>
-        )}
+        {error && <div className="alert alert-danger">{error.message}</div>}
         {portfolio && (
           <>
             <h1>I am portfolio Page</h1>
