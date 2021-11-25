@@ -5,7 +5,7 @@ const handlerPosts = async (req, res) => {
     .get('https://jsonplaceholder.typicode.com/posts')
     .catch((e) => {
       console.error(e)
-      res.status(error.status || 400).end('Api Error')
+      res.status(e.status || 400).json({ message: 'Api Error' })
     })
   res.status(200).json(data.slice(0, 10))
 }
